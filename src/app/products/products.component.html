@@ -1,15 +1,16 @@
 <h1>{{storeName | uppercase }}</h1>
-<!-- <img src={{storeLogo}} alt=""> -->
+<img src={{storeLogo}} alt="">
 <h3 *ngIf="Discountcheck()" >We offer an explicit discount of: {{ Discount | percent :"2.0"}} </h3>
 
-<h3>Choose Category</h3>
-<select >
-    <option value="default">----</option>
+
+  <h2>Choose Category</h2>
+
+<select class="form-select">
+    <option  value="default"></option>
     <option *ngFor="let i of CategoryList" [value]="i">
         {{i.Name}}
     </option>
 </select>
-
 <h1 *ngIf="IsPurshased; then Purchase; else NonPurchase"></h1>
 <ng-template #Purchase>
 <table class="table">
@@ -19,6 +20,7 @@
           <th scope="col">Name</th>
           <th scope="col">Quantity</th>
           <th scope="col">Price</th>
+          <th scope="col">Image</th>
         </tr>
       </thead>
       <tbody>
@@ -27,7 +29,7 @@
           <td>{{i.Name}}</td>
           <td>{{i.Quantity}}</td>
           <td>{{i.Price}}</td>
-          <td>{{i.Img}}</td>
+          <td><img src={{i.Img}} width="150" height="150"></td>
         </tr>
       </tbody>
 </table>
@@ -45,5 +47,5 @@
 
 <br>
 <div *ngFor="let item of ProductList"> {{item.Name}} </div>
-{{getproductlistbyid.ID}}  {{getproductlistbyid.Name}}
+<!-- {{getproductlistbyid.ID}}  {{getproductlistbyid.Name}} -->
 <br>
