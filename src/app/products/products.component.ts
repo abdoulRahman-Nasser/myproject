@@ -26,16 +26,14 @@ export class ProductsComponent implements OnInit {
     this.storeName= "Infinity Stores";
     this.storeLogo = "assets/logo.png ";
     this.ProductList= [{
-      ID: 1, Name: "Phone", Quantity: 5, Price: 20, Img: ""
+    ID: 1, Name: "labtop", Quantity: 5, Price: 20, Img: "assets/microsoft surface.jpg"
     }];
-    
-   
     this.IsPurshased = false;
     this.ClientName = "";
     this.CategoryList =[
       { ID: 1, Name: 'moblies' },
-      { ID: 2, Name: 'Cars' },
-      { ID: 3, Name: 'computers' }
+      { ID: 2, Name: 'labtops' },
+      { ID: 3, Name: 'electrices' }
       ];
   }
 
